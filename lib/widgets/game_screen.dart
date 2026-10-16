@@ -7,11 +7,6 @@ import 'difficulty_bar.dart';
 import 'game_board_widget.dart';
 import 'next_piece_review.dart';
 
-/// The single screen of the app, now driven by a real [GameController].
-///
-/// Layout philosophy unchanged from the mockup phase: the board fills
-/// the entire viewport, every control floats on top of it at low
-/// opacity, and score/timer/mute are hidden until pause is tapped.
 class GameScreen extends StatefulWidget {
   const GameScreen({super.key});
 
@@ -181,9 +176,6 @@ class _GameScreenState extends State<GameScreen> {
   }
 }
 
-/// A round, low-opacity button that sits directly on top of the
-/// board without introducing a solid UI surface. A null [onPressed]
-/// renders it visibly disabled (e.g. once the game is over).
 class _FloatingIconButton extends StatelessWidget {
   final IconData icon;
   final VoidCallback? onPressed;
